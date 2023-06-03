@@ -1,11 +1,9 @@
 import React from "react";
-import { Data } from "./Data.js";
-import Products from "./Products";
-import Home from "./Home.js";
+import Home from "./Home";
 import Cart from "./Cart";
 import { CartProvider } from "react-use-cart";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Nav from "./Nav.js";
+import Nav from "./Nav";
 
 const App = () => {
   return (
@@ -14,8 +12,8 @@ const App = () => {
         <BrowserRouter>
           <Nav />
           <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="cart" element={<Cart />} />
+            <Route path='/' element={<Home />} />
+            <Route path='cart' element={<Cart />} />
             <Route />
           </Routes>
         </BrowserRouter>

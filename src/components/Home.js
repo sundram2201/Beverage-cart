@@ -8,13 +8,13 @@ const Home = () => {
   const [searchItem, setSearchItem] = useState("");
 
   return (
-    <div className="container">
-      <div className="col-md-4 justify-content-md-center">
+    <div className='container'>
+      <div className='col-md-4 justify-content-md-center'>
         <input
-          className="form-control mr-sm-2 srch"
-          type="search"
-          placeholder="Search Your favorite Beverage..."
-          aria-label="Search"
+          className='form-control mr-sm-2 srch'
+          type='search'
+          placeholder='Search Your favorite Beverage...'
+          aria-label='Search'
           onChange={(e) => setSearchItem(e.target.value)}
         />
       </div>
@@ -28,16 +28,8 @@ const Home = () => {
         ) {
           return val;
         }
-      }).map((item, index) => {
-        return (
-          <Products
-            image={item.image}
-            name={item.name}
-            desc={item.desc}
-            price={item.price}
-            item={item}
-          />
-        );
+      }).map((item) => {
+        return <Products image={item.image} name={item.name} desc={item.desc} price={item.price} item={item} />;
       })}
     </div>
   );
